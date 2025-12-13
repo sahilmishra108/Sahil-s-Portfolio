@@ -94,17 +94,7 @@ Want to get this project running on your local machine? Follow these simple step
 
 ---
 
-### **Contact & Links** 🔗
 
-**Sahil Mishra** - Let's connect!
-
-<div align="center">
-
-[![Portfolio](https://img.shields.io/badge/Live_Demo-sahil.bio-2ea44f?style=for-the-badge&logo=vercel)](https://www.sahil.bio)
-&nbsp;
-<!-- [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sahil-mishra/) -->
-
-</div>
 
 ---
 
