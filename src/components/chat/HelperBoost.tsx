@@ -37,7 +37,7 @@ const questions = {
   Me: 'Who are you? I want to know more about you.',
   Projects: 'What are your projects? What are you working on right now?',
   Skills: 'What are your skills? Give me a list of your soft and hard skills.',
-  Fun: "What the craziest thing you've ever done? (mb?) What are your hobbies? ",
+  Fun: "Show me your life outside of tech! I want to see the sports gallery and photos. 📸",
   Contact:
     'How can I reach you? What kind of project would make you say "yes" immediately?',
 };
@@ -205,17 +205,17 @@ export default function HelperBoost({
                 style={{ justifyContent: 'safe center' }}
               >
                 {questionConfig.map(({ key, color, icon: Icon }) => (
-                <Button
-                  key={key}
-                  onClick={() => handleQuestionClick(key)}
-                  variant="outline"
-                  className="border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 h-auto min-w-[100px] flex-shrink-0 cursor-pointer rounded-xl bg-white/80 dark:bg-gray-800/80 px-4 py-3 shadow-none backdrop-blur-sm transition-none active:scale-95"
-                >
-                  <div className="flex items-center gap-3 text-gray-900 dark:text-gray-100">
-                    <Icon size={18} strokeWidth={2} color={color} />
-                    <span className="text-sm font-medium">{key}</span>
-                  </div>
-                </Button>
+                  <Button
+                    key={key}
+                    onClick={() => handleQuestionClick(key)}
+                    variant="outline"
+                    className="border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 h-auto min-w-[100px] flex-shrink-0 cursor-pointer rounded-xl bg-white/80 dark:bg-gray-800/80 px-4 py-3 shadow-none backdrop-blur-sm transition-none active:scale-95"
+                  >
+                    <div className="flex items-center gap-3 text-gray-900 dark:text-gray-100">
+                      <Icon size={18} strokeWidth={2} color={color} />
+                      <span className="text-sm font-medium">{key}</span>
+                    </div>
+                  </Button>
                 ))}
 
                 {/* Need Inspiration Button */}
@@ -223,19 +223,19 @@ export default function HelperBoost({
                   <Tooltip delayDuration={0}>
                     <TooltipTrigger asChild>
                       <Drawer.Trigger className="group relative flex flex-shrink-0 items-center justify-center">
-                      <motion.div
-                        className="hover:bg-gray-100 dark:hover:bg-gray-700 flex h-auto cursor-pointer items-center space-x-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-800/80 px-4 py-3 text-sm backdrop-blur-sm transition-all duration-200"
-                        whileHover={{ scale: 1 }}
-                        whileTap={{ scale: 0.98 }}
-                      >
-                        <div className="flex items-center gap-3 text-gray-900 dark:text-gray-100">
-                          <CircleEllipsis
-                            className="h-[20px] w-[18px] text-primary dark:text-primary-light" // or use suitable text colors here
-                            strokeWidth={2}
-                          />
-                          {/* <span className="text-sm font-medium">More</span> */}
-                        </div>
-                      </motion.div>
+                        <motion.div
+                          className="hover:bg-gray-100 dark:hover:bg-gray-700 flex h-auto cursor-pointer items-center space-x-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-800/80 px-4 py-3 text-sm backdrop-blur-sm transition-all duration-200"
+                          whileHover={{ scale: 1 }}
+                          whileTap={{ scale: 0.98 }}
+                        >
+                          <div className="flex items-center gap-3 text-gray-900 dark:text-gray-100">
+                            <CircleEllipsis
+                              className="h-[20px] w-[18px] text-primary dark:text-primary-light" // or use suitable text colors here
+                              strokeWidth={2}
+                            />
+                            {/* <span className="text-sm font-medium">More</span> */}
+                          </div>
+                        </motion.div>
                       </Drawer.Trigger>
                     </TooltipTrigger>
                     <TooltipContent>

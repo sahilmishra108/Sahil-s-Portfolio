@@ -8,21 +8,21 @@ import Script from "next/script";
 import "./globals.css";
 
 // Load Inter font for non-Apple devices
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "Yuvraj Singh Portfolio",
+  title: "Sahil Mishra Portfolio",
   description: "Interactive portfolio with an AI-powered Memoji that answers questions about me, my skills, and my experience",
   keywords: [
-    "Yuvraj Singh", 
-    "Portfolio", 
-    "Developer", 
-    "AI", 
-    "Interactive", 
-    "Memoji", 
+    "Sahil Mishra",
+    "Portfolio",
+    "Developer",
+    "AI",
+    "Interactive",
+    "Memoji",
     "Web Development",
     "Full Stack",
     "Next.js",
@@ -30,24 +30,24 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "Yuvraj Singh",
-      url: "https://yuvraj.bio",
+      name: "Sahil Mishra",
+      url: "https://sahil.bio",
     },
   ],
-  creator: "Yuvraj Singh",
+  creator: "Sahil Mishra",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yuvraj.bio",
-    title: "Yuvraj Singh Portfolio",
+    url: "https://sahil.bio",
+    title: "Sahil Mishra Portfolio",
     description: "Interactive portfolio with an AI-powered Memoji that answers questions about me",
-    siteName: "Yuvraj Singh Portfolio",
+    siteName: "Sahil Mishra Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yuvraj Singh Portfolio",
+    title: "Sahil Mishra Portfolio",
     description: "Interactive portfolio with an AI-powered Memoji that answers questions about me",
-    creator: "@yuvrajsingh",
+    creator: "@sahilmishra",
   },
   icons: {
     icon: [

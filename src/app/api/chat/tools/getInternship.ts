@@ -16,9 +16,9 @@ export const getInternship = tool({
 - 🔥 I move fast, learn faster, and I’m HUNGRYYYYY for big challenges
 
 📬 **Contact me** via:
-- Email: yuvraj0412s@gmail.com
-- LinkedIn: [linkedin.com/in/yuvraj-singh-77601827a](- LinkedIn: https://linkedin.com/in/yuvraj-singh-77601827a)
-- GitHub: [github.com/yuvraj0412s](https://github.com/yuvraj0412s)
+- Email: sahil@example.com
+- LinkedIn: [linkedin.com/in/sahil-mishra](- LinkedIn: https://linkedin.com/in/sahil-mishra)
+- GitHub: [github.com/sahilmishra](https://github.com/sahilmishra)
 
 Let's build cool shit together ✌️
     `;

@@ -27,7 +27,7 @@ export const CarouselContext = createContext<{
   onCardClose: (index: number) => void;
   currentIndex: number;
 }>({
-  onCardClose: () => {},
+  onCardClose: () => { },
   currentIndex: 0,
 });
 
@@ -144,7 +144,7 @@ export const Carousel = ({
                   },
                 }}
                 key={'card' + index}
-                className="rounded-3xl last:pr-[5%] md:last:pr-[33%]"
+                className="last:pr-[5%] md:last:pr-[33%]"
               >
                 {item}
               </motion.div>
@@ -270,7 +270,7 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden rounded-3xl bg-gray-100 dark:bg-neutral-900"
+        className="relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden bg-gray-100 dark:bg-neutral-900"
       >
         <div className="absolute inset-x-0 top-0 z-30 h-full cursor-pointer bg-gradient-to-b from-black hover:scale-110 via-transparent to-transparent" />
         {/*<div className="absolute inset-0 z-20 cursor-pointer bg-black/20 hover:bg-black/2" />*/}
@@ -294,6 +294,7 @@ export const Card = ({
           fill
           className="absolute inset-0 z-10 object-cover"
         />
+        <div className="pointer-events-none absolute inset-0 z-20 backdrop-blur-xl bg-black/40" />
       </motion.button>
     </>
   );

@@ -4,366 +4,298 @@ import Image from 'next/image';
 import { ChevronRight, Link } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
-// --- PROJECT DATABASE ---
-// This array holds the detailed information for each project.
+/* =========================================================
+   PROJECT DATABASE
+========================================================= */
+
 const PROJECT_CONTENT = [
-    {
-    // --- NEW AI-NATIVE PORTFOLIO PROJECT ---
-    title: 'AI-Native Portfolio',
+  /* ===================== 1. AI PORTFOLIO ===================== */
+  {
+    title: 'AI-Portfolio',
     description:
-      'Static portfolios are boring. Mine talks back. The world’s first AI-native portfolio where an AI avatar answers your questions about me in real time.',
+      'Not a static portfolio — this one talks back. An AI-personal portfolio where an AI avatar answers questions about my skills, projects, and experience in real time.',
     techStack: [
       'Next.js',
       'React',
       'TypeScript',
       'Tailwind CSS',
       'Framer Motion',
-      'Mistral AI API',
       'OpenAI API',
+      'Mistral AI',
       'Node.js',
       'Vercel',
     ],
-    date: 'August 2025', // <-- TODO: Update with your project date
-    links: [
-      {
-        name: 'Live Demo - You Are Here!',
-        url: 'https://www.yuvraj.bio',
-      },
-      {
-        name: 'GitHub Repository',
-        url: 'https://github.com/yuvraj0412s/ai-native-portfolio',
-      },
-    ],
-    images: [
-      { src: '/projects/ai-portfolio-chat.png', alt: 'The AI Native Portfolio chat interface in action' },
-      { src: '/projects/ai-portfolio-home.png', alt: 'Homepage of the AI Native Portfolio' },
-    ],
-  },
-  {
-    title: 'AgroAI',
-    description:
-      'Snap a leaf, get a diagnosis! This AI-powered web app detects 38 plant diseases with 96% accuracy and gives instant tips on symptoms, causes, and treatment—making plant care smarter and easier for farmers and gardeners.',
-    techStack: [
-      'Python',
-      'Flask',
-      'TensorFlow',
-      'Keras',
-      'Deep Learning',
-      'Computer Vision',
-      'EfficientNetB4',
-      'HTML5',
-      'CSS3',
-      'JavaScript',
-    ],
-    date: 'May 2024',
+    date: '2025',
     links: [
       {
         name: 'Live Demo',
-        url: 'https://github.com/yuvraj0412s/AgroAI', // <-- TODO: Replace with your live deployment URL.... will do later
+        url: 'https://www.sahil.bio',
       },
       {
         name: 'GitHub Repository',
-        url: 'https://github.com/yuvraj0412s/AgroAI', // <-- TODO: Replace with your actual repo URL if different
-      },
-    ],
-    // All seven of screenshots are showcased here
-    images: [
-      {
-        src: '/projects/agroai-home.png',
-        alt: 'AgroAI Homepage - AI-Powered Plant Health Companion',
-      },
-      {
-        src: '/projects/agroai-result.png',
-        alt: 'AgroAI Analysis Result Page with Prediction and Confidence Score',
-      },
-      {
-        src: '/projects/agroai-guide.png',
-        alt: 'AgroAI Crop-wise Disease Guides Page',
-      },
-      {
-        src: '/projects/agroai-guide-detail.png',
-        alt: 'AgroAI Tomato Disease Guide Detail Page with Accordion',
-      },
-      {
-        src: '/projects/agroai-how-it-works.png',
-        alt: 'AgroAI How It Works Page with a 3-step flowchart',
-      },
-      {
-        src: '/projects/agroai-resources.png',
-        alt: 'AgroAI Farming & Plant Care Resources Page',
-      },
-      {
-        src: '/projects/agroai-about.png',
-        alt: 'AgroAI About and Contact Page',
-      },
-    ],
-  },
-  {
-    // --- NEW DJANGO E-COMMERCE PROJECT ---
-    title: 'Holohype',
-    description:
-      'HoloHype is a quirky full-stack e-commerce hub with a clever AI that knows what you want, a lightning-fast cart, secure logins, and a super-handy admin panel to keep all the goodies in check.',
-    techStack: [
-      'Django',
-      'Python',
-      'Cython',
-      'Content-Based Filtering',
-      'NumPy',
-      'Pandas',
-      'JavaScript',
-      'AJAX',
-      'HTML5',
-      'CSS3',
-    ],
-    date: 'June 2025', // <-- TODO: Update with your project date
-    links: [
-      {
-        name: 'Live Demo',
-        url: 'https://github.com/yuvraj0412s/holohype', // <-- TODO: Replace with your live deployment URL
-      },
-      {
-        name: 'GitHub Repository',
-        url: 'https://github.com/yuvraj0412s/holohype', // <-- TODO: Update with your actual repo URL
+        url: 'https://github.com/sahilmishra108/Sahil-s-Portfolio',
       },
     ],
     images: [
-      { src: '/projects/holohype-home.png', alt: 'E-commerce platform homepage with product listings' },
-      { src: '/projects/holohype-login.png', alt: 'Modern user login and authentication page' },
-      { src: '/projects/holohype-product.png', alt: 'Product detail page with AI-powered recommendations' },
-      { src: '/projects/holohype-cart.png', alt: 'Dynamic shopping cart with real-time updates' },
+      { src: '/projects/ai-portfolio-1.png', alt: 'AI portfolio homepage' },
+      { src: '/projects/ai-portfolio-2.png', alt: 'AI portfolio chat interface' },
+      { src: '/projects/ai-portfolio-3.png', alt: 'AI portfolio features' },
+      { src: '/projects/ai-portfolio-4.png', alt: 'AI portfolio details' },
     ],
   },
+
+  /* ===================== 2. e-DRISHTI ===================== */
   {
-    // --- NEW REACT PORTFOLIO PROJECT ---
-    title: 'Old Portfolio',
+    title: 'e-Drishti',
     description:
-      'A stellar dev portfolio with shooting stars on a dark space background! Built with React, Vite & Tailwind, it features sleek animations, dark/light mode, a filterable skills grid, dynamic project showcase, and a working contact form. A cosmic way to show off my frontend skills!',
+      'AI-powered telemedicine and remote patient monitoring system. Uses live camera feeds and OCR to extract vitals in real time and enables ICU-like monitoring for remote patients.',
     techStack: [
       'React',
       'Vite',
-      'Tailwind CSS',
-      'Radix UI',
-      'Lucide Icons',
-      'TypeScript',
-      'Responsive Design',
+      'Node.js',
+      'Express',
+      'Socket.io',
+      'MySQL',
+      'Tesseract OCR',
+      'Hugging Face',
+      'Qwen-VL',
     ],
-    date: '2024', // <-- TODO: Update with your project date
+    date: '2025',
     links: [
       {
-        name: 'Live Demo',
-        url: 'https://yuvraj-portfolio-phi.vercel.app', // <-- TODO: Update if this is the correct link
-      },
-      {
         name: 'GitHub Repository',
-        url: 'https://github.com/yuvraj0412s/react-tailwind-portfolio', // <-- TODO: Update with your actual repo URL
+        url: 'https://github.com/sahilmishra108/e-Drishti',
       },
     ],
     images: [
-      { src: '/projects/old-portfolio-home.png', alt: 'Homepage of the React portfolio with hero section' },
-      { src: '/projects/old-portfolio-about.png', alt: 'About Me section with description' },
-      { src: '/projects/old-portfolio-skills.png', alt: 'Filterable skills grid with progress bars' },
-      { src: '/projects/old-portfolio-projects.png', alt: 'Project showcase section with cards' },
-      { src: '/projects/old-portfolio-contact.png', alt: 'Contact page with form to reach out directly' },
+      { src: '/projects/edrishti-landing.png', alt: 'e-Drishti Landing Page' },
+      { src: '/projects/edrishti-dashboard.png', alt: 'ICU Dashboard' },
+      { src: '/projects/edrishti-camera.png', alt: 'Live Camera Vitals Analysis' },
+      { src: '/projects/edrishti-vitals.png', alt: 'Extracted Vitals History' },
+      { src: '/projects/edrishti-charts.png', alt: 'Vitals Trends and Analytics' },
     ],
   },
+
+  /* ===================== 3. SAARTHI ===================== */
   {
-    // --- YOUTUBE CLONE PROJECT (FROM YOUR README) ---
-    title: 'YouTube Clone',
+    title: 'SAARTHI – AI Career Coach',
     description:
-      'A pixel-perfect, responsive clone of the YouTube user interface, built from scratch using modern HTML5 and CSS3. The project showcases a deep understanding of frontend fundamentals, featuring a dynamic video grid built with CSS Grid, a fully responsive sidebar and header created with Flexbox, and a mobile-first design approach that ensures a seamless experience on any device.',
+      'AI-powered career assistant that helps job seekers with resume building, interview preparation, and personalized career guidance using Gemini AI.',
     techStack: [
-      'HTML5',
-      'CSS3',
-      'Flexbox',
-      'CSS Grid',
-      'Responsive Design',
-      'Mobile-First',
+      'React',
+      'Next.js',
+      'Gemini AI',
+      'Prisma ORM',
+      'NeonDB',
+      'Vercel',
     ],
-    date: '2023', // <-- TODO: Update with your project date
+    date: '2025',
     links: [
       {
-        name: 'Live Demo',
-        url: 'https://github.com/yuvraj0412s/YouTube_clone', // <-- TODO: Replace with your live deployment URL
-      },
-      {
         name: 'GitHub Repository',
-        url: 'https://github.com/yuvraj0412s/YouTube_clone', // <-- TODO: Update if your repo name is different
+        url: 'https://github.com/sahilmishra108/saarthi',
       },
     ],
     images: [
-      { src: '/projects/yt-clone-home.png', alt: 'Screenshot of the YouTube Clone project homepage' },
-      // Add more screenshots here if you have them!
+      { src: '/projects/saarthi-job-tracker.png', alt: 'Job Application Tracker' },
+      { src: '/projects/saarthi-resume-builder.png', alt: 'AI Resume Builder' },
+      { src: '/projects/saarthi-interview-prep.png', alt: 'Interview Preparation' },
+      { src: '/projects/saarthi-industry-insights.png', alt: 'Industry Trends & Insights' },
+      { src: '/projects/saarthi-cover-letters.png', alt: 'AI Cover Letter Generator' },
     ],
   },
+
+  /* ===================== 4. FITMATE ===================== */
   {
-    title: 'Latency-Aware Task Partitioning',
+    title: 'FitMate',
     description:
-      'Proposed a framework for optimal task partitioning and user association across edge–fog–cloud layers, implementing metaheuristic algorithms (ACO, GA, PSO) to solve MILP-based formulations for both dependent and independent subtasks.',
+      'AI-powered fitness companion that provides personalized workout and diet recommendations based on user goals and activity patterns.',
+    techStack: [
+      'React',
+      'JavaScript',
+      'AI APIs',
+      'Frontend Architecture',
+    ],
+    date: '2024',
+    links: [
+      {
+        name: 'GitHub Repository',
+        url: 'https://github.com/sahilmishra108/fitmate',
+      },
+    ],
+    images: [
+      { src: '/projects/fitmate-home.png', alt: 'FitMate AI Landing Page' },
+      { src: '/projects/fitmate-voice-ready.png', alt: 'Voice Conversation Setup' },
+      { src: '/projects/fitmate-voice-chat.png', alt: 'AI Voice Coach Interface' },
+    ],
+  },
+
+  /* ===================== OTHER PROJECTS ===================== */
+
+
+  {
+    title: 'Brain Tumor Classification',
+    description:
+      'Deep learning based brain tumor detection system using CNNs for MRI image classification.',
     techStack: [
       'Python',
-      'Metaheuristic Algorithms (ACO, GA, PSO)',
-      'MILP',
-      'Edge Computing',
+      'CNN',
+      'Deep Learning',
+      'Flask',
     ],
-    date: 'Ongoing',
-    links: [],
-    images: [
+    date: '2024',
+    links: [
       {
-        src: '/projects/RP_preview.png', // Placeholder image
-        alt: 'Latency-Aware Task Partitioning project image 1',
+        name: 'GitHub Repository',
+        url: 'https://github.com/sahilmishra108/Brain-Tumor-Classification-Using-Deep-Learning',
       },
+    ],
+    images: [
+      { src: '/projects/brain-tumor-predict-ui.png', alt: 'Brain Tumor Prediction Interface' },
+      { src: '/projects/brain-tumor-result-yes.png', alt: 'Classification Result: Tumor Detected' },
+      { src: '/projects/brain-tumor-result-no.png', alt: 'Classification Result: Healthy' },
+    ],
+  },
+
+  {
+    title: 'Diwali Sales Analysis',
+    description:
+      'Exploratory data analysis project extracting consumer insights and sales trends from Diwali sales datasets.',
+    techStack: [
+      'Python',
+      'Pandas',
+      'Matplotlib',
+      'Data Analysis',
+    ],
+    date: '2024',
+    links: [
+      {
+        name: 'GitHub Repository',
+        url: 'https://github.com/sahilmishra108/Diwali-Sales-Analysis-using-Python',
+      },
+    ],
+    images: [
+      { src: '/projects/diwali-sales-state-amount.png', alt: 'Total Sales Amount by State' },
+      { src: '/projects/diwali-sales-state-orders.png', alt: 'Total Orders by State' },
+      { src: '/projects/diwali-sales-product-amount.png', alt: 'Sales Amount by Product Category' },
+      { src: '/projects/diwali-sales-product-count.png', alt: 'Product Category Count' },
+      { src: '/projects/diwali-sales-data-head.png', alt: 'Dataset Overview' },
     ],
   },
 ];
 
-// --- COMPONENT & INTERFACE DEFINITIONS ---
-// Define interface for project prop
+/* =========================================================
+   PROJECT CONTENT COMPONENT
+========================================================= */
+
 interface ProjectProps {
   title: string;
 }
 
-// This component dynamically renders the project details
 const ProjectContent = ({ project }: { project: ProjectProps }) => {
-  // Find the matching project data from the database
-  const projectData = PROJECT_CONTENT.find((p) => p.title === project.title);
+  const projectData = PROJECT_CONTENT.find(
+    (p) => p.title === project.title
+  );
 
-  if (!projectData) {
-    return <div>Project details not available</div>;
-  }
+  if (!projectData) return <div>Project not found</div>;
 
   return (
     <div className="space-y-10">
-      {/* Header section with description */}
       <div className="rounded-3xl bg-[#F5F5F7] p-8 dark:bg-[#1D1D1F]">
-        <div className="space-y-6">
-          <div className="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400">
-            <span>{projectData.date}</span>
-          </div>
+        <span className="text-sm text-neutral-500">{projectData.date}</span>
 
-          <p className="text-secondary-foreground font-sans text-base leading-relaxed md:text-lg">
-            {projectData.description}
-          </p>
+        <p className="mt-4 text-base leading-relaxed">
+          {projectData.description}
+        </p>
 
-          {/* Tech stack */}
-          <div className="pt-4">
-            <h3 className="mb-3 text-sm tracking-wide text-neutral-500 uppercase dark:text-neutral-400">
-              Technologies
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {projectData.techStack.map((tech, index) => (
-                <span
-                  key={index}
-                  className="rounded-full bg-neutral-200 px-3 py-1 text-sm text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
+        <div className="mt-6 flex flex-wrap gap-2">
+          {projectData.techStack.map((tech, i) => (
+            <span
+              key={i}
+              className="rounded-full bg-neutral-200 px-3 py-1 text-sm dark:bg-neutral-800"
+            >
+              {tech}
+            </span>
+          ))}
         </div>
       </div>
 
-      {/* Links section */}
-      {projectData.links && projectData.links.length > 0 && (
-        <div className="mb-24">
-          <div className="px-6 mb-4 flex items-center gap-2">
-            <h3 className="text-sm tracking-wide text-neutral-500 dark:text-neutral-400">
-              Links
-            </h3>
-            <Link className="text-muted-foreground w-4" />
-          </div>
-          <Separator className="my-4" />
-          <div className="space-y-3">
-            {projectData.links.map((link, index) => (
+      {projectData.links.length > 0 && (
+        <div>
+          <Separator />
+          <div className="mt-4 space-y-2">
+            {projectData.links.map((link, i) => (
               <a
-                key={index}
+                key={i}
                 href={link.url}
                 target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-[#F5F5F7] flex items-center justify-between rounded-xl p-4 transition-colors hover:bg-[#E5E5E7] dark:bg-neutral-800 dark:hover:bg-neutral-700"
+                className="flex items-center justify-between rounded-xl bg-neutral-100 p-4 dark:bg-neutral-800"
               >
-                <span className="font-light capitalize">{link.name}</span>
-                <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <span>{link.name}</span>
+                <ChevronRight className="w-4" />
               </a>
             ))}
           </div>
         </div>
       )}
 
-      {/* Images gallery */}
-      {projectData.images && projectData.images.length > 0 && (
-        <div className="space-y-6">
-          <div className="grid grid-cols-1 gap-4">
-            {projectData.images.map((image, index) => (
-              <div
-                key={index}
-                className="relative aspect-video overflow-hidden rounded-2xl"
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover transition-transform"
-                />
-              </div>
-            ))}
+      <div className="grid gap-4">
+        {projectData.images.map((img, i) => (
+          <div key={i} className="overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800">
+            <Image
+              src={img.src}
+              alt={img.alt}
+              width={1200}
+              height={675}
+              className="h-auto w-full"
+            />
           </div>
-        </div>
-      )}
+        ))}
+      </div>
     </div>
   );
 };
 
-// --- MAIN DATA EXPORT ---
-// This is the data used by your main portfolio page.
+/* =========================================================
+   MAIN EXPORT (ORDERED)
+========================================================= */
+
 export const data = [
-   {
-    category: 'AI & Next.js',
-    title: 'AI-Native Portfolio',
-    src: '/projects/ai-portfolio-preview.png', // <-- TODO: Make sure you have a preview image at this path
-    content: (
-      // The `title` here MUST match the full title in PROJECT_CONTENT
-      <ProjectContent project={{ title: 'AI-Native Portfolio' }} />
-    ),
+  {
+    category: 'AI & Portfolio',
+    title: 'AI-Portfolio',
+    src: '/projects/ai-portfolio-1.png',
+    content: <ProjectContent project={{ title: 'AI-Portfolio' }} />,
   },
   {
-    category: 'Full-Stack AI',
-    title: 'AgroAI',
-    src: '/projects/agroai-preview.png', // Use the main homepage screenshot for the preview
-    content: (
-      <ProjectContent project={{ title: 'AgroAI' }} />
-    ),
+    category: 'Healthcare AI',
+    title: 'e-Drishti',
+    src: '/projects/edrishti-landing.png',
+    content: <ProjectContent project={{ title: 'e-Drishti' }} />,
   },
   {
-    category: 'Full-Stack & AI',
-    title: 'Holohype',
-    src: '/projects/holohype-preview.png', // <-- TODO: Make sure you have a preview image at this path
-    content: (
-      <ProjectContent project={{ title: 'Holohype' }} />
-    ),
+    category: 'AI Career Tools',
+    title: 'SAARTHI – AI Career Coach',
+    src: '/projects/saarthi-job-tracker.png',
+    content: <ProjectContent project={{ title: 'SAARTHI – AI Career Coach' }} />,
   },
   {
-    category: 'Frontend Development',
-    title: 'Old Portfolio',
-    src: '/projects/old-portfolio-preview.png', // <-- TODO: Make sure you have a preview image at this path
-    content: (
-      <ProjectContent project={{ title: 'Old Portfolio' }} />
-    ),
+    category: 'AI & Fitness',
+    title: 'FitMate',
+    src: '/projects/fitmate-home.png',
+    content: <ProjectContent project={{ title: 'FitMate' }} />,
+  },
+
+  {
+    category: 'Deep Learning',
+    title: 'Brain Tumor Classification',
+    src: '/projects/brain-tumor-predict-ui.png',
+    content: <ProjectContent project={{ title: 'Brain Tumor Classification' }} />,
   },
   {
-    category: 'Frontend Development',
-    title: 'YouTube Clone',
-    src: '/projects/yt-clone-preview.png', // <-- TODO: Make sure you have a preview image at this path
-    content: (
-      <ProjectContent project={{ title: 'YouTube Clone' }} />
-    ),
-  },
-  {
-    category: 'Edge Computing',
-    title: 'Latency-Aware Task Partitioning',
-    src: '/projects/RP_preview.png', // Placeholder image
-    content: (
-      <ProjectContent project={{ title: 'Latency-Aware Task Partitioning' }} />
-    ),
+    category: 'Data Analytics',
+    title: 'Diwali Sales Analysis',
+    src: '/projects/diwali-sales-state-amount.png',
+    content: <ProjectContent project={{ title: 'Diwali Sales Analysis' }} />,
   },
 ];

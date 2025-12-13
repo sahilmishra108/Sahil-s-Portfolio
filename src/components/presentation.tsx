@@ -7,13 +7,13 @@ import React from 'react';
 export function Presentation() {
   // Personal information
   const profile = {
-    name: 'Yuvraj Singh',
+    name: 'Sahil Mishra',
     age: '22 years old',
-    location: 'Gurugram, India',
+    location: 'Narela, Delhi',
     // Add a newline character after the emoji
     description:
-      "Hey 👋\nI'm Yuvraj also known as Yuvi, building AI-powered experiences that talk back, think with you, and make static tech feel alive.",
-    src: '/profile-yuvi-03.jpeg',
+      "Mixing math, logic, and a touch of chaos to create intelligent systems.\nWhen the models work, it’s science. When they don’t, it’s… still science.",
+    src: '/sahilpic.jpeg',
     fallbackSrc:
       'https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3',
   };
@@ -46,27 +46,21 @@ export function Presentation() {
     <div className="mx-auto w-full max-w-5xl py-6 font-sans">
       <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
         {/* Image section */}
-        <div className="relative mx-auto aspect-square w-full max-w-sm">
-          <div className="relative h-full w-full overflow-hidden rounded-2xl">
-            <motion.div
-              initial={{ scale: 0.92, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1] }}
-              className="h-full w-full"
-            >
-              <Image
-                src={profile.src}
-                alt={profile.name}
-                width={500}
-                height={500}
-                className="h-full w-full object-cover object-center"
-                onError={(e) => {
-                  // Fallback to placeholder if image fails to load
-                  const target = e.target as HTMLImageElement;
-                  target.src = profile.fallbackSrc;
-                }}
-              />
-            </motion.div>
+        {/* Image section */}
+        <div className="relative mx-auto aspect-square w-48">
+          <div className="relative h-full w-full overflow-hidden rounded-full bg-blue-100">
+            <Image
+              src={profile.src} // Updated to use profile.src
+              alt={profile.name}
+              width={200}
+              height={200}
+              className="h-full w-full object-cover object-center"
+              onError={(e) => {
+                // Fallback to placeholder if image fails to load
+                const target = e.target as HTMLImageElement;
+                target.src = profile.fallbackSrc;
+              }}
+            />
           </div>
         </div>
 
@@ -103,7 +97,7 @@ export function Presentation() {
             transition={{ delay: 0.6, duration: 0.5 }}
             className="mt-4 flex flex-wrap gap-2"
           >
-            {['AI', 'Developer', 'Sport', 'SaaS Builder'].map(
+            {[].map(
               (tag) => (
                 <span
                   key={tag}

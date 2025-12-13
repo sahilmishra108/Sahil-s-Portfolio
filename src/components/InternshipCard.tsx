@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 
 const InternshipCard = () => {
   const openMail = () => {
-    window.open('mailto:yuvraj0412s@gmail.com', '_blank');
+    window.open('mailto:sahilkrmishra108@gmail.com', '_blank');
   };
   const router = useRouter();
 
@@ -23,14 +23,14 @@ const InternshipCard = () => {
           {/* Avatar placeholder */}
           <div className="bg-muted h-16 w-16 overflow-hidden rounded-full shadow-md">
             <img
-              src="/profile-yuvi.jpg"
-              alt="Yuvraj's avatar"
+              src="/avatar.gif"
+              alt="Sahil's avatar"
               className="h-full w-full object-cover"
             />
           </div>
           <div>
             <h2 className="text-foreground text-2xl font-semibold">
-              Yuvraj Singh
+              Sahil Mishra
             </h2>
             <p className="text-muted-foreground text-sm">
               Internship Application
@@ -66,7 +66,7 @@ const InternshipCard = () => {
           <div>
             <p className="text-foreground text-sm font-medium">Location</p>
             <p className="text-muted-foreground text-sm">
-              Preferably Gurugram
+              Preferably Delhi NCR
             </p>
           </div>
         </div>
@@ -108,8 +108,8 @@ const InternshipCard = () => {
           What I bring
         </p>
         <p className="text-foreground text-sm">
-          Real-world AI dev experience. <br /> 
-          Blending AI passion with hands-on development to bring tech ideas to life. <br /> 
+          Real-world AI dev experience. <br />
+          Blending AI passion with hands-on development to bring tech ideas to life. <br />
           I ship fast, and love building useful things that actually work.
         </p>
       </div>
