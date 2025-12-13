@@ -6,7 +6,7 @@
   </p> -->
   <br />
 
-  <h1> Sahil Mishra's AI-Native Portfolio ✨</h1>
+  <h1> Sahil Mishra's AI-Portfolio ✨</h1>
 </div>
 
 ---
@@ -26,7 +26,7 @@
 
 ### **About The Project** 💡
 
-Static portfolios are a thing of the past. They present a one-sided, lifeless view of a developer's journey. I decided to build this **AI-Native Portfolio** to break that mold.
+Static portfolios are a thing of the past. They present a one-sided, lifeless view of a developer's journey. I decided to build this **AI-Portfolio** to break that mold.
 
 This project is an **AI-powered, interactive portfolio** that transforms the "About Me" page into a dynamic, engaging conversation. Instead of forcing recruiters, developers, and friends to scroll endlessly through information, it invites them to ask questions and receive answers tailored specifically to them.  
 
@@ -94,9 +94,6 @@ Want to get this project running on your local machine? Follow these simple step
 
 ---
 
-
-
----
 
 ### **Tags**
 
