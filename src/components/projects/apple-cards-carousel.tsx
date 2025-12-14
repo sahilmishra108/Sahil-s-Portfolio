@@ -226,20 +226,21 @@ export const Card = ({
               className="fixed inset-0 h-full w-full bg-black/80 backdrop-blur-lg"
             />
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={{ opacity: 0, y: 20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 20, scale: 0.95 }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
               ref={containerRef}
               layoutId={layout ? `card-${card.title}` : undefined}
-              className="relative z-[60] mx-auto my-10 h-fit max-w-5xl rounded-3xl bg-white font-sans dark:bg-neutral-900"
+              className="relative z-[60] mx-auto my-10 h-fit max-w-5xl rounded-3xl bg-white font-sans shadow-2xl dark:bg-neutral-900"
             >
               {/* Sticky close button */}
               <div className="sticky top-4 z-52 flex justify-end px-8 pt-8 md:px-14 md:pt-8">
                 <button
-                  className="flex h-8 w-8 items-center justify-center rounded-full bg-black/90 shadow-md dark:bg-white/90"
+                  className="flex h-8 w-8 items-center justify-center rounded-full bg-black/50 backdrop-blur-md transition-colors hover:bg-black/70 dark:bg-white/50 dark:hover:bg-white/70"
                   onClick={handleClose}
                 >
-                  <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
+                  <IconX className="h-5 w-5 text-white dark:text-black" />
                 </button>
               </div>
 
@@ -248,13 +249,13 @@ export const Card = ({
                 <div>
                   <motion.p
                     layoutId={layout ? `category-${card.title}` : undefined}
-                    className="text-base font-medium text-black dark:text-white"
+                    className="text-sm font-medium uppercase tracking-wider text-neutral-500 dark:text-neutral-400"
                   >
                     {card.category}
                   </motion.p>
                   <motion.p
                     layoutId={layout ? `title-${card.title}` : undefined}
-                    className="mt-4 text-2xl font-semibold text-neutral-700 md:text-5xl dark:text-white"
+                    className="mt-2 text-3xl font-bold text-neutral-800 md:text-5xl dark:text-white"
                   >
                     {card.title}
                   </motion.p>
@@ -270,20 +271,20 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden bg-gray-100 dark:bg-neutral-900"
+        className="group relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden rounded-3xl bg-gray-100 shadow-xl transition-shadow hover:shadow-2xl dark:bg-neutral-900"
       >
-        <div className="absolute inset-x-0 top-0 z-30 h-full cursor-pointer bg-gradient-to-b from-black hover:scale-110 via-transparent to-transparent" />
-        {/*<div className="absolute inset-0 z-20 cursor-pointer bg-black/20 hover:bg-black/2" />*/}
-        <div className="relative z-40 p-8">
+        <div className="absolute inset-x-0 top-0 z-30 h-full pointer-events-none bg-gradient-to-b from-black/80 via-black/20 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-90" />
+
+        <div className="relative z-40 p-6">
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
-            className="text-left font-sans text-sm font-medium text-white md:text-base"
+            className="text-left font-sans text-xs font-semibold uppercase tracking-wider text-white/80"
           >
             {card.category}
           </motion.p>
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="max-w-xs text-left font-sans text-xl font-semibold [text-wrap:balance] text-white md:text-3xl"
+            className="mt-2 max-w-xs text-left font-sans text-xl font-bold leading-tight text-white [text-wrap:balance]"
           >
             {card.title}
           </motion.p>
@@ -292,9 +293,8 @@ export const Card = ({
           src={card.src}
           alt={card.title}
           fill
-          className="absolute inset-0 z-10 object-cover"
+          className="absolute inset-0 z-10 object-cover transition-transform duration-700 ease-out group-hover:scale-110"
         />
-        <div className="pointer-events-none absolute inset-0 z-20 backdrop-blur-xl bg-black/40" />
       </motion.button>
     </>
   );

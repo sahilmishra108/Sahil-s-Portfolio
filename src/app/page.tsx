@@ -3,6 +3,7 @@
 import FluidCursor from '@/components/FluidCursor';
 import { Button } from '@/components/ui/button';
 import { GithubButton } from '@/components/ui/github-button';
+import { ThemeToggle } from '@/components/ui/ThemeToggle'; // Import the theme toggle
 import WelcomeModal from '@/components/welcome-modal';
 import { motion } from 'framer-motion';
 import {
@@ -16,7 +17,6 @@ import {
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import { ThemeToggle } from '@/components/ui/ThemeToggle'; // Import the theme toggle
 
 /* ---------- quick-question data ---------- */
 const questions = {
@@ -62,14 +62,12 @@ export default function Home() {
     },
   };
 
-
-
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 pb-10 md:pb-20">
+    <div className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-4 pb-10 pt-20 md:pb-20 md:pt-0">
       {/* big blurred footer word */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 flex justify-center overflow-hidden">
         <div
-          className="hidden bg-gradient-to-b from-neutral-500/10 to-neutral-500/0 bg-clip-text text-[10rem] leading-none font-black text-transparent select-none sm:block lg:text-[16rem]"
+          className="bg-gradient-to-b from-neutral-500/10 to-neutral-500/0 bg-clip-text text-[6rem] leading-none font-black text-transparent select-none sm:text-[10rem] lg:text-[16rem]"
           style={{ marginBottom: '-2.5rem' }}
         >
           Sahil
@@ -98,13 +96,14 @@ export default function Home() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
             <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
           </span>
-          Looking for a talent?
+          <span className="hidden sm:inline">Looking for a talent?</span>
+          <span className="inline sm:hidden">Hire me</span>
         </button>
       </div>
 
       {/* header */}
       <motion.div
-        className="z-1 mt-24 mb-8 flex flex-col items-center text-center md:mt-4 md:mb-12"
+        className="z-1 mb-8 flex flex-col items-center text-center md:mb-12"
         variants={topElementVariants}
         initial="hidden"
         animate="visible"
@@ -113,7 +112,7 @@ export default function Home() {
           <WelcomeModal />
         </div>
 
-        <h2 className="text-secondary-foreground mt-1 text-xl font-semibold md:text-2xl">
+        <h2 className="text-secondary-foreground mt-2 text-xl font-semibold md:text-2xl">
           Hey, I'm Sahil Mishra 👋
         </h2>
         <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
@@ -129,6 +128,7 @@ export default function Home() {
           fill
           className="translate-y-1 object-contain"
           priority
+          unoptimized // Added to ensure large GIF loads correctly
         />
       </div>
 
@@ -174,11 +174,11 @@ export default function Home() {
               key={key}
               onClick={() => goToChat(questions[key])}
               variant="outline"
-              className="border-border hover:bg-border/30 aspect-square w-full cursor-pointer rounded-2xl border bg-white/30 py-8 shadow-none backdrop-blur-lg active:scale-95 md:p-10"
+              className="border-border hover:bg-border/30 aspect-auto w-full cursor-pointer rounded-2xl border bg-white/30 py-3 sm:aspect-square sm:py-8 shadow-none backdrop-blur-lg active:scale-95 md:p-10 text-left sm:text-center justify-start sm:justify-center px-4"
             >
-              <div className="flex h-full flex-col items-center justify-center gap-1 text-gray-700">
+              <div className="flex sm:flex-col flex-row items-center sm:justify-center gap-3 sm:gap-1 text-gray-700 w-full">
                 <Icon size={22} strokeWidth={2} color={color} />
-                <span className="text-xs font-medium sm:text-sm">{key}</span>
+                <span className="text-sm font-medium">{key}</span>
               </div>
             </Button>
           ))}
