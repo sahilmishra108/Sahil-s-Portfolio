@@ -4,7 +4,7 @@ import FluidCursor from '@/components/FluidCursor';
 import { Button } from '@/components/ui/button';
 
 import { ThemeToggle } from '@/components/ui/ThemeToggle'; // Import the theme toggle
-import WelcomeModal from '@/components/welcome-modal';
+
 import { motion } from 'framer-motion';
 import {
   ArrowRight,
@@ -102,9 +102,7 @@ export default function Home() {
         initial="hidden"
         animate="visible"
       >
-        <div className="z-100">
-          <WelcomeModal />
-        </div>
+
 
         <h2 className="text-secondary-foreground mt-2 text-xl font-semibold md:text-2xl">
           Hey, I'm Sahil Mishra 👋
